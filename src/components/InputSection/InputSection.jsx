@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
-import { Formik, ErrorMessage } from 'formik';
+// import { Formik, ErrorMessage } from 'formik';
 import { Form, Label, Input, Button } from './InputSection.styled';
 
 export class InputSection extends React.Component {
@@ -20,10 +20,10 @@ handleSubmitForm = (e) => {
   };
 
     render() {
-        const { name, number } = this.state;
+        // const { name, number } = this.state;
         
         return (
-            <Formik onSubmit={this.handleSubmitForm}>
+            // <Formik onSubmit={this.handleSubmitForm}>
                 <Form>
                  <Label>
                     Name
@@ -34,7 +34,7 @@ handleSubmitForm = (e) => {
                 title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
                 required
             />
-                <ErrorMessage name="name" component="div" />
+                {/* <ErrorMessage name="name" component="div" /> */}
                 </Label>
                 <Label>
                     Number
@@ -45,11 +45,11 @@ handleSubmitForm = (e) => {
                 title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
                 required
             />
-                <ErrorMessage name="number" component="div" />
+                {/* <ErrorMessage name="number" component="div" /> */}
           </Label>
                 <Button type="submit">Add Contact</Button>
             </Form>
-                </Formik>
+                // </Formik>
         )
     }
 }
